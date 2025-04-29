@@ -1,0 +1,16 @@
+"team_name": "FantasticFour" # Your team name
+"eval_method": ["mcqa", "rag", "quantiz"] # mcqa, reward, rag, compression
+"task_type": "causal_lm" # causal_lm, seq2seq
+"policy_model_path": "mddokmak/MNLP" # Your path to the final checkpoint
+"reference_model_path": "openai-community/gpt2-large" # The repo id of your pretrained reference model
+"quantized_policy_model_path": "mddokmak/MNLPQuantized" # Your path to the final quantized checkpoint
+"rag_policy_model_path": "mddokmak/MNLP" # Your path to the final RAG checkpoint
+"test_data_path": "../data/mcq_test_dataset_formatted.jsonl" # Your path to the test data
+"dpo_model_args": 
+  "is_rag": False # Put any model arguments required to load your DPO model below
+"rag_model_args": # Put any model arguments required to load your rag model below
+  "encoder_model_path": "facebook/dpr-question_encoder-single-nq-base"
+  "document_dir": "./documents"
+  "is_rag": True
+"quantized_model_args": 
+  "is_rag": False # Put any model arguments required to load your quantized model below
